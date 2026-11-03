@@ -1,10 +1,10 @@
-# Student Management System - Backend
+# Student Management System - Backend API
 
-A simple and lightweight backend API for a Student Management System built with Node.js and Express.
+A clean and simple RESTful backend for a Student Management System built using Node.js and Express.js.
 
 ---
 
-## Student Information
+## Student Details
 - **Name**: Deepak Singh
 - **Roll No**: 2500320100417
 - **Class / Section**: CSE-16
@@ -13,9 +13,22 @@ A simple and lightweight backend API for a Student Management System built with 
 ---
 
 ## Tech Stack
-- **Node.js**
-- **Express.js**
-- **CORS**
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Middleware**: CORS, Express JSON
+
+---
+
+## Data Model
+Each student record contains the following fields:
+
+| Field | Type | Description |
+|---|---|---|
+| `id` | Number | Auto-increment unique identifier |
+| `name` | String | Full name of the student |
+| `email` | String | Email address of the student |
+| `course` | String | Enrolled course (e.g. B.Tech CSE) |
+| `age` | Number | Age of the student |
 
 ---
 
@@ -32,11 +45,11 @@ A simple and lightweight backend API for a Student Management System built with 
    npm install
    ```
 
-3. **Run the server**:
+3. **Start the server**:
    ```bash
    npm start
    ```
-   The server will start at: `http://localhost:5000`
+   Server will be running at `http://localhost:3000`.
 
 ---
 
@@ -44,33 +57,12 @@ A simple and lightweight backend API for a Student Management System built with 
 
 | Method | Endpoint | Description |
 |---|---|---|
-| `GET` | `/` | Test server connection |
-| `GET` | `/students` | Fetch all students |
-| `GET` | `/students/:id` | Fetch a single student by ID |
-| `POST` | `/students` | Create/Add a new student |
-| `PUT` | `/students/:id` | Update student by ID |
-| `DELETE` | `/students/:id` | Delete student by ID |
+| `GET` | `/` | Health check route |
+| `GET` | `/api/students` | Get all students |
+| `GET` | `/api/students/:id` | Get student by ID |
+| `POST` | `/api/students` | Add a new student |
+| `PUT` | `/api/students/:id` | Update student details by ID |
+| `DELETE` | `/api/students/:id` | Delete student by ID |
 
 ---
-
-## Sample Request Payloads
-
-### 1. Add Student (`POST /students`)
-**Request Body (JSON):**
-```json
-{
-  "name": "Aman Verma",
-  "rollNo": "2500320100420",
-  "course": "B.Tech CSE"
-}
-```
-
-### 2. Update Student (`PUT /students/:id`)
-**Request Body (JSON):**
-```json
-{
-  "name": "Aman Verma",
-  "course": "B.Tech AI & ML"
-}
-```
 
