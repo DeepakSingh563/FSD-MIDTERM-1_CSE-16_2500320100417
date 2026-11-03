@@ -1,0 +1,25 @@
+{
+  "name": "mid-term-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeepakSingh563/FSD-MIDTERM-1_CSE-16_2500320100417.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeepakSingh563/FSD-MIDTERM-1_CSE-16_2500320100417/issues"
+  },
+  "homepage": "https://github.com/DeepakSingh563/FSD-MIDTERM-1_CSE-16_2500320100417#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}
